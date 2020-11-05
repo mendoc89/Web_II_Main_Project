@@ -1,0 +1,25 @@
+@import "./vendor/normalize";
+@import "./partials/colors";
+@import "./partials/typography";
+@import "./partials/mixins";
+
+@media (min-width: 1024px) {
+    .container {
+      background-color: navy;
+    }
+
+  }
+
+ nav {
+    background-color: $primary-color;
+     ul{
+         padding: 10px;
+         li{
+             font-size: 10px;
+         }
+     }
+ }
+
+ .btn {
+   @include blue-btn;
+ }
