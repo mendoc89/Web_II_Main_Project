@@ -1,25 +1,40 @@
 @import "./vendor/normalize";
-@import "./partials/colors";
+@import "./partials/base";
+@import "colors";
 @import "./partials/typography";
-@import "./partials/mixins";
 
-@media (min-width: 1024px) {
-    .container {
-      background-color: navy;
-    }
-
+/*Medium*/
+@media (min-width: 768px) {
+  .container {
+    background-color: rgb(0, 0, 0);
   }
+}
+/*Large*/
+@media (min-width: 1024px) {
+  .container {
+    background-color: rgb(255, 255, 255);
+  }
+}
+/*Body*/
+body {
+  color: $primary-color;
+  background: $secondary-color;
+}
+/*Navigation*/
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li { 
+    display: inline-block; 
+    }
+  a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: orange;
+  }
+}
 
- nav {
-    background-color: $primary-color;
-     ul{
-         padding: 10px;
-         li{
-             font-size: 10px;
-         }
-     }
- }
-
- .btn {
-   @include blue-btn;
- }
