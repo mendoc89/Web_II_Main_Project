@@ -1,0 +1,14 @@
+@mixin mbtn() {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    background-color: $C5;
+    color: $C2;
+    padding: 20px 100px;
+    margin: 4px;
+    cursor: pointer;
+}
+@mixin shadow($size) {
+    box-shadow: $size #cc0000;
+}

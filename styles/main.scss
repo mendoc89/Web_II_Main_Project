@@ -1,40 +1,75 @@
 @import "./vendor/normalize";
-@import "./partials/base";
-@import "colors";
+@import "./partials/mixins";
+@import "./partials/colors";
 @import "./partials/typography";
 
-/*Medium*/
+// Medium Displays
 @media (min-width: 768px) {
   .container {
-    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: $C1;
   }
 }
-/*Large*/
+// Large Displays
 @media (min-width: 1024px) {
   .container {
-    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: $C2;
   }
 }
-/*Body*/
-body {
-  color: $primary-color;
-  background: $secondary-color;
+header {
+  padding: 50px 50px 50px 50px;
+  background-color: $C3;
+  }
+h1 {
+  display: inline;
+  font-family: $F1;
 }
-/*Navigation*/
+h2 {
+  display: inline;
+  font-family: $F1;
+}
 nav {
   ul {
-    margin: 0;
-    padding: 0;
+    padding: 10px;
+    margin: 10px;
     list-style: none;
+    font-family: $F1;
   }
-  li { 
-    display: inline-block; 
-    }
+  li {
+    display: inline-block;
+  }
   a {
     display: block;
-    padding: 5px 10px;
     text-decoration: none;
-    color: orange;
+    @include mbtn();
   }
 }
-
+section {
+  padding: 50px;
+  margin: 20px;
+  background-color: $C4;
+  border: 2px solid $C1;
+  border-radius: 50px;
+  @include shadow(10px 10px 50px);
+}
+p {
+  font-family: $F2;
+}
+img {
+  border: 2px dotted $C1;
+  opacity: 0.50;
+  @include shadow(10px 10px 2px);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  }
+.grid-item {
+  padding: 10px;
+  }
+footer{
+  padding: 10px;
+  background-color:$C2;
+  color: $C4;
+  }
