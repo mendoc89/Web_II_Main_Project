@@ -5,11 +5,15 @@
 
 // Medium Displays
 @media (min-width: 768px) {
-  .container {
-    text-align: center;
+  /*.container {
+    display: flex;
     color: $C1;
   }
 }
+    .container {
+    display: inline-flex;
+  }
+}*/
 // Large Displays
 @media (min-width: 1024px) {
   .container {
@@ -68,8 +72,46 @@ img {
 .grid-item {
   padding: 10px;
   }
-footer{
+footer {
   padding: 10px;
   background-color:$C2;
   color: $C4;
   }
+
+//Class Example (11/11/202)
+//Parent
+.flex-block {
+  width: 700px;
+  height: 500px;
+  background-color: #c1c1c1;
+  display: flex; //important.
+  //flex-direction: row;
+  //flex-wrap: wrap;
+  //flex-flow: row wrap; //Both direction and wrap
+  //justify-content: center;
+  //align-items: center;
+  //align-content: center;
+}
+
+.E1 {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background-color: #741717;
+  display: flex;
+  justify-content: center;
+}
+.E2 {
+  width: 100px;
+  height: 100px;
+  background-color: #310303;
+  flex-grow: 2;
+}
+.E3 {
+  width: 100px;
+  height: 100px;
+  background-color: #e96d6d;
+  color: white;
+  order: 2;
+}
+}
